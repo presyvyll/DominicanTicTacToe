@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DominicanTicTacToe.MainPage"
+             Title="Dominican Tic-Tac-Toe"
+             BackgroundColor="#F0F8FF">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <!-- Game Title -->
+            <Label Text="Dominican Tic-Tac-Toe" 
+                   FontSize="28" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   TextColor="#2E8B57" />
+
+            <!-- Turn Indicator -->
+            <Label x:Name="TurnLabel" 
+                   Text="Player 1's Turn (🌴)" 
+                   FontSize="20" 
+                   HorizontalOptions="Center" 
+                   TextColor="#556B2F" />
+
+            <!-- Tic-Tac-Toe Grid -->
+            <Grid x:Name="GameGrid" 
+                  RowDefinitions="100, 100, 100" 
+                  ColumnDefinitions="100, 100, 100" 
+                  HorizontalOptions="Center" 
+                  VerticalOptions="Center"
+                  BackgroundColor="#FFFFFF" 
+                  Padding="10"
+                  RowSpacing="5"
+                  ColumnSpacing="5">
+
+                <!-- Row 0 -->
+                <Frame x:Name="A1Frame" Grid.Row="0" Grid.Column="0" Padding="0" BackgroundColor="#E0FFFF" CornerRadius="10">
+                    <ImageButton x:Name="A1" Clicked="OnButtonClicked" BackgroundColor="Transparent" />
+                </Frame>
+                <Frame x:Name="A2Frame" Grid.Row="0" Grid.Column="1" Padding="0" BackgroundColor="#E0FFFF" CornerRadius="10">
+                    <ImageButton x:Name="A2" Clicked="OnButtonClicked" BackgroundColor="Transparent" />
+                </Frame>
+                <Frame x:Name="A3Frame" Grid.Row="0" Grid.Column="2" Padding="0" BackgroundColor="#E0FFFF" CornerRadius="10">
+                    <ImageButton x:Name="A3" Clicked="OnButtonClicked" BackgroundColor="Transparent" />
+                </Frame>
+
+                <!-- Row 1 -->
+                <Frame x:Name="B1Frame" Grid.Row="1" Grid.Column="0" Padding="0" BackgroundColor="#E0FFFF" CornerRadius="10">
+                    <ImageButton x:Name="B1" Clicked="OnButtonClicked" BackgroundColor="Transparent" />
+                </Frame>
+                <Frame x:Name="B2Frame" Grid.Row="1" Grid.Column="1" Padding="0" BackgroundColor="#E0FFFF" CornerRadius="10">
+                    <ImageButton x:Name="B2" Clicked="OnButtonClicked" BackgroundColor="Transparent" />
+                </Frame>
+                <Frame x:Name="B3Frame" Grid.Row="1" Grid.Column="2" Padding="0" BackgroundColor="#E0FFFF" CornerRadius="10">
+                    <ImageButton x:Name="B3" Clicked="OnButtonClicked" BackgroundColor="Transparent" />
+                </Frame>
+
+                <!-- Row 2 -->
+                <Frame x:Name="C1Frame" Grid.Row="2" Grid.Column="0" Padding="0" BackgroundColor="#E0FFFF" CornerRadius="10">
+                    <ImageButton x:Name="C1" Clicked="OnButtonClicked" BackgroundColor="Transparent" />
+                </Frame>
+                <Frame x:Name="C2Frame" Grid.Row="2" Grid.Column="1" Padding="0" BackgroundColor="#E0FFFF" CornerRadius="10">
+                    <ImageButton x:Name="C2" Clicked="OnButtonClicked" BackgroundColor="Transparent" />
+                </Frame>
+                <Frame x:Name="C3Frame" Grid.Row="2" Grid.Column="2" Padding="0" BackgroundColor="#E0FFFF" CornerRadius="10">
+                    <ImageButton x:Name="C3" Clicked="OnButtonClicked" BackgroundColor="Transparent" />
+                </Frame>
+            </Grid>
+
+            <!-- Reset Button -->
+            <Button Text="Reset Game" 
+                    Clicked="OnResetClicked" 
+                    HorizontalOptions="Center" 
+                    BackgroundColor="#20B2AA" 
+                    TextColor="White"
+                    FontSize="18"
+                    CornerRadius="20"
+                    Padding="15,10" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
